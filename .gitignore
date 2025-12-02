@@ -1,0 +1,42 @@
+# ---- Python bytecode ----
+__pycache__/
+*.py[cod]
+*.pyo
+
+# ---- macOS system files ----
+.DS_Store
+
+# ---- PyCharm / IDEA ----
+.idea/
+
+# ---- Virtual environments (如果有的话，按你的名字改) ----
+venv/
+.env/
+.venv/
+conda_env/
+
+# ---- Build / 临时结果 ----
+build/
+dist/
+*.log
+
+# ---- 结果输出目录 ----
+Results/*
+!Results/.gitkeep
+!Results/README.md
+
+# ---- 数据集（只保留说明文件）----
+Datasets/*
+!Datasets/README.md
+!Datasets/MNIST/
+!Datasets/NMNIST/
+!Datasets/FashionMNIST/
+Datasets/MNIST/*
+Datasets/NMNIST/*
+Datasets/FashionMNIST/*
+
+# ---- 其他 ----
+print_tree.py
+
+!BaseModel/PlasticityModel/*.pyd
+!BaseModel/PlasticityModel/*.so
