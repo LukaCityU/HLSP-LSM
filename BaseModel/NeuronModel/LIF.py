@@ -1,11 +1,13 @@
 """
 LIF Model:
-	dV / dt = (-V(t) / tau_m) + RI(t)
-Difference Equation:
-	V[t] = beta * V[t-1] + (1-beta) * I[t] * tau_m
+	tau_m * (dV / dt) = -V(t) + RI(t)
+Difference Equation (R=1):
+	V[t] = beta * V[t-1] + (1-beta) * I[t]
 Exponential Euler:
 	beta = exp(-dt/tau_m)
-	V[t] = exp(-dt/tau_m) * V[t-1] + (1-exp(-dt/tau_m)) * I[t] * tau_m
+	V[t] = exp(-dt/tau_m) * V[t-1] + (1-exp(-dt/tau_m)) * I[t]
+Engineering Simplified Form：
+	V[t] = exp(-dt/tau_m) * V[t-1] + I[t]
 """
 import torch
 import torch.nn as nn
@@ -61,7 +63,9 @@ class LIF(nn.Module):
 			self.initialize_state(I.shape[0], I.device)
 
 		# V[t]
-		t_voltage = (self.beta1 * self.memory_voltage) + (self.beta2 * self.R * I * self.tau_m)
+		# t_voltage = (self.beta1 * self.memory_voltage) + (self.beta2 * self.R * I * self.tau_m)
+		t_voltage = (self.beta1 * self.memory_voltage) + (self.R * I)
+
 		# Neurons with refractory time below threshold stay at the reset potential,
 		# and only neurons above the threshold accumulate membrane potential
 		cant_spike = self.ref < self.ref_th
