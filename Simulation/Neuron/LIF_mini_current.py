@@ -13,9 +13,8 @@ def fun(dt):
 
 	lif = LIF(neuron_size, np.array([0, ]), V_reset=0., V_th=20, tau_m=10., t_ref=5., R=1., dt=dt)
 
-	# mini = (V_th - V_reset) / R / tau_m
-	c1 = 2.0
-	c2 = 2.1
+	c1 = 1.9
+	c2 = 2.0
 	I = torch.tensor([[c1, c2]]).float().to(device)  # [batch, size]
 
 	V = np.zeros((batch_size, time_step, neuron_size))
@@ -62,6 +61,6 @@ def fun(dt):
 
 
 if __name__ == '__main__':
-	dt_ = 0.1
+	dt_ = 1.0
 	fun(dt_)
 	print('done')
