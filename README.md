@@ -4,6 +4,10 @@ This repository contains the official implementation of the paper:
 
 "HLSP-LSM: Enhancing image recognition performance of liquid state machines via brain-inspired hybrid long short-term plasticity"
 
+<p style="text-align: center;">
+  <img src="images/architecture.png" alt="HLSP-LSM framework" width="1400">
+</p>
+
 HLSP-LSM introduces a hybrid long short-term plasticity (HLSP) mechanism into the classical Liquid State Machine (LSM) architecture. Inspired by biological synaptic plasticity, HLSP-LSM integrates:
 
 - Long-term plasticity (E-STDP & I-STDP)
