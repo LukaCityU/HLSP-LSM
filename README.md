@@ -62,7 +62,7 @@ HLSP-LSM/
 
 ## Installation
 
-1. Create environment:  
+1. Create environment (for Windows):  
 conda create -n hlsp_lsm python=3.12  
 conda activate hlsp_lsm
 
@@ -120,15 +120,17 @@ python Simulation/Plasticity/Synapse_with_STDP.py
 
 To improve simulation speed, the following modules are provided with precompiled backends:
 
+ESTDP.cpython-313-darwin.so
+ESTDP.cp312-win_amd64.pyd  
 ISTDP.cpython-313-darwin.so  
 ISTDP.cp312-win_amd64.pyd  
 STD.cpython-313-darwin.so  
 STD.cp312-win_amd64.pyd  
-ISTDP.pyi / STD.pyi type stubs
+ESTDP.pyi / ISTDP.pyi / STD.pyi type stubs
 
 Python automatically chooses:
 - .pyd on Windows
-- .so on macOS/Linux
+- .so on macOS/Linux (python==3.13)
 
 If the precompiled binaries do not match your Python version, please contact the authors.
 The source files will be released after the paper is accepted.
@@ -165,5 +167,4 @@ via brain-inspired hybrid long short-term plasticity},
 ## Contact
 
 For questions or discussions, please open an issue or contact:  
-chaoluo2023@gmail.com  
-D22092100409@cityu.edu.mo
+chaoluo2023@gmail.com
