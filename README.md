@@ -120,7 +120,7 @@ python Simulation/Plasticity/Synapse_with_STDP.py
 
 To improve simulation speed, the following modules are provided with precompiled backends:
 
-ESTDP.cpython-313-darwin.so
+ESTDP.cpython-313-darwin.so  
 ESTDP.cp312-win_amd64.pyd  
 ISTDP.cpython-313-darwin.so  
 ISTDP.cp312-win_amd64.pyd  
