@@ -39,7 +39,7 @@ HLSP-LSM/
 │   │── SynapseModel/  
 │   │   └── Expon.py          # Exponential decay synapse  
 │   └── PlasticityModel/  
-│       │── ESTDP.py          # Excitatory STDP  
+│       │── ESTDP.py          # Excitatory STDP (compiled cpython .so/.pyd) 
 │       │── ISTDP.*           # Inhibitory STDP (compiled cpython .so/.pyd)  
 │       └── STD.*             # Short-term depression (compiled backend)  
 │── Simulation/  
