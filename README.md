@@ -152,14 +152,18 @@ HLSP-LSM is distributed under the MIT License. See LICENSE for details.
 
 ## Citation
 
-If you use HLSP-LSM in your research, please cite (the article has been submitted):
+If you use HLSP-LSM in your research, please cite:
 
-@article{HLSPLSM2025,  
-  title={HLSP-LSM: Enhancing image recognition performance of liquid state machines 
-via brain-inspired hybrid long short-term plasticity},  
-  author={...},  
-  journal={...},  
-  year={2025}  
+@article{LUO2026109245,  
+title = {HLSP-LSM: Enhancing image recognition performance of liquid state machines via brain-inspired hybrid long short-term plasticity},  
+journal = {Neural Networks},  
+volume = {204},  
+pages = {109245},  
+year = {2026},  
+issn = {0893-6080},  
+doi = {https://doi.org/10.1016/j.neunet.2026.109245},  
+url = {https://www.sciencedirect.com/science/article/pii/S0893608026007069},  
+author = {Chao Luo and Chiawei Chu and Jianfang Wu and Muhammad Tahir Rasheed and Junsong Wang},  
 }
 
 -------------------------------------------------------------------------------
